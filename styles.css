@@ -1,0 +1,134 @@
+/* Estilos Gerais */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0e6d2; /* Cor de fundo bege claro */
+    color: #333; 
+}
+
+header {
+    background-color: #b8860b; /* Cor de fundo marrom dourado */
+    color: #fff; 
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none; /* Remove marcadores da lista */
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline; /* Coloca os itens do menu em linha */
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none; /* Remove sublinhado dos links */
+}
+
+main {
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha se necessário */
+    justify-content: space-around; /* Distribui os itens com espaço ao redor */
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    flex: 0 0 calc(45% - 20px); /* Cada seção ocupa 45% da largura, menos 20px de margem */
+}
+
+h1, h2 {
+    color: #8b4513; /* Cor de destaque marrom */
+}
+
+/* Estilos Específicos */
+#destaque {
+    background-color: #d2b48c; /* Cor de fundo bege mais escuro */
+    color: #333;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+#destaque h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#destaque button {
+    background-color: #8b4513; 
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #b8860b; 
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilos da Barra de Pesquisa */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; 
+}
+
+.search-container img { /* Estilos aplicados diretamente à tag <img> */
+    width: 150px; /* Defina a largura desejada */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 10px; 
+}
+
+#search-bar {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex-grow: 1; /* Permite que a barra de pesquisa ocupe o espaço disponível */
+    margin-right: 10px;
+}
+
+#search-button {
+    background-color:
+
+
+/* ... outros estilos ... */
+
+.personagem figure {
+    text-align: center; /* Centraliza o conteúdo da figure */
+}
+
+.personagem img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
+    height: auto;     /* Mantém a proporção da imagem */
+    margin-bottom: 10px; /* Espaçamento entre a imagem e a legenda */
+}
+
+.personagem figcaption {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos da legenda em coluna */
+    align-items: center;    /* Centraliza os elementos horizontalmente */
+}
+
+.personagem figcaption h3 {
+    margin-bottom: 5px;  /* Espaçamento entre o título e a descrição */
+}

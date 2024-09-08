@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorando a Bíblia</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <header>
+        <h1>Explorando a Bíblia</h1>
+        <div class="search-container">
+            <img src="Jesus.png" alt="Jesus" class="search-icon">
+            <input type="text" id="search-bar" placeholder="Pesquisar na Bíblia">
+            <button id="search-button">Buscar</button> 
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Biblioteca Divina.html" target="_blank" >Biblioteca Divina</a></li> 
+                <li><a href="Herois da Fé.html" target="_blank" >Heróis da Fé</a></li> 
+                <li><a href="Grandes Narrativas.html" target="_blank" >Grandes Narrativas</a></li> 
+                <li><a href="Vestígios do Passado.html" target="_blank" >Vestígios do Passado</a></li> 
+                <li><a href="Fale Conosco.html" target="_blank" >Fale Conosco</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="destaque">
+            <h2>Desvende os Mistérios da Bíblia</h2>
+            <p>Tire suas dúvidas sobre livros, personagens, acontecimentos e mergulhe na arqueologia bíblica.</p>
+            <button>Começar a Explorar</button>
+        </section>
+
+        <div class="container"> 
+            <section id="versiculo-do-dia">
+                <h2>Versículo do Dia</h2>
+                <div class="versiculo-content">
+                    <p> "Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna." <a href="https://www.bibliaonline.com.br/acf/jo/3" target="_blank">(João 3:16)</a></p>
+                    <button class="copiar-botao">Copiar</button> </div>
+            </section>
+
+            <section id="personagem-destaque">
+                <h2>Personagem em Destaque: Moisés</h2>
+                <div class="personagem-content"> 
+                    <div class="texto">
+                        <p>Conheça a história de Moisés, o líder que libertou o povo de Israel da escravidão no Egito.</p>
+                        <a href="https://www.ebiografia.com/moises/" target="_blank" >Saiba mais</a> 
+                    </div>
+                </div>
+            </section>
+
+            <section id="evento-biblico">
+                <h2>Evento Bíblico da Semana: A Travessia do Mar Vermelho</h2>
+                <div class="evento-content"> 
+                    <div class="texto">
+                        <p>Relembre o milagre da travessia do Mar Vermelho e seu significado para o povo de Israel.</p>
+                        <a href="#">Leia mais</a> 
+                    </div>
+                </div>
+            </section>
+
+            <section id="arqueologia-destaque">
+                <h2>Descoberta Arqueológica: Cidade Bíblica de Silo</h2>
+                <div class="arqueologia-content">
+                    <div class="texto">
+                        <p>Arqueólogos descobrem evidências da antiga cidade de Silo, mencionada na Bíblia.</p>
+                        <a href="https://guiame.com.br/gospel/mundo-cristao/registros-sobre-o-rei-biblico-davi-sao-descobertos-por-pesquisadores.html" target="_blank" >Veja mais</a> 
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2023 Explorando a Bíblia</p>
+        </footer>
+    </main>
+
+    <script>
+        // Funcionalidade para copiar o versículo
+        const copiarBotao = document.querySelector('.copiar-botao');
+        const versiculoContent = document.querySelector('.versiculo-content p');
+
+        copiarBotao.addEventListener('click', () => {
+            const textoVersiculo = versiculoContent.textContent;
+            navigator.clipboard.writeText(textoVersiculo)
+                .then(() => {
+                    alert('Versículo copiado!');
+                })
+                .catch(err => {
+                    console.error('Erro ao copiar o versículo: ', err);
+                    alert('Erro ao copiar. Tente novamente.');
+                });
+        });
+    </script>
+
+    <script>
+        const searchButton = document.getElementById('search-button');
+const searchBar = document.getElementById('search-bar');
+
+searchButton.addEventListener('click', () => {
+    const searchTerm = searchBar.value.toLowerCase(); 
+    performSearch(searchTerm);
+});
+    </script>
+
+<script>
+    function performSearch(searchTerm) {
+    // Obter todos os elementos que podem conter resultados da pesquisa
+    const searchableElements = document.querySelectorAll('main p, main h2, main h3'); 
+
+    // Iterar sobre os elementos e verificar se o termo de pesquisa está presente
+    searchableElements.forEach(element => {
+        const textContent = element.textContent.toLowerCase();
+        if (textContent.includes(searchTerm)) {
+            element.classList.remove('hidden'); 
+        } else {
+            element.classList.add('hidden'); 
+        }
+    });
+}
+</script>
+
+</body>
+</html>
